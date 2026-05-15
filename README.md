@@ -8,6 +8,8 @@ A Python movie database application with SQLite storage, OMDb API integration, a
 * Store movie data in SQLite
 * Generate a movie website automatically
 * Display movie posters
+* Open IMDb pages by clicking movie posters
+* Responsive movie grid layout
 * Search movies
 * Random movie suggestions
 * Movie statistics
