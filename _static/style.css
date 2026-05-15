@@ -52,3 +52,9 @@ body {
     width: 128px;
     height: 193px;
 }
+
+.movie-rating {
+  font-size: 0.75em;
+  text-align: center;
+  color: #666;
+}
