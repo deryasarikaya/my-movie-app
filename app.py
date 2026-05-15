@@ -108,8 +108,9 @@ def add_movie():
         year = int(movie_data["Year"])
         rating = float(movie_data["imdbRating"])
         poster = movie_data["Poster"]
+        imdb_id = movie_data["imdbID"]
 
-        storage.add_movie(title, year, rating, poster)
+        storage.add_movie(title, year, rating, poster, imdb_id)
 
     except requests.exceptions.RequestException:
         print(f"{RED}Could not connect to OMDb API.{RESET}")
@@ -252,7 +253,9 @@ def generate_website():
         movie_grid += f"""
         <li>
             <div class="movie">
-                <img class="movie-poster" src="{movie_data['poster']}" alt="{title} poster"/>
+                <a href="https://www.imdb.com/title/{movie_data['imdb_id']}/" target="_blank">
+                    <img class="movie-poster" src="{movie_data['poster']}" alt="{title} poster"/>
+                </a>
                 <div class="movie-title">{title}</div>
                 <div class="movie-year">{movie_data['year']}</div>
                 <div class="movie-rating">IMDb: {movie_data['rating']}</div>
